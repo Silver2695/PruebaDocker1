@@ -1,0 +1,28 @@
+Crear carpeta de proyecto "Proyecto_Libros"
+
+correr comando npm init --yes
+
+creae carpeta src
+dentro de src crear las carpetas:
+-config
+-helpers
+-models
+-public
+-routes
+-views
+ y crear los archivos
+*database.js
+*indes.js
+
+despues correr los siguientes comando 
+para instalar la sisguientes dependencias:
+
+npm install express express-handlebars express-session
+npm install method-override mongoose
+npm install passpor passport-local bcrypjs
+npm install nodemon -D
+
+en el archivo package.json colocar el siguiente codigo
+en la parte de scripts
+"dev": "nodemon src/index.js"
+  

@@ -1,0 +1,55 @@
+{{#each errors}}
+    
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+    {{text}}
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+    </button>
+    </div>
+{{/each}}
+
+<div class="col-md-4 mx-auto">
+    <div class="card">
+        <div class="card-header">
+            <h1>Nuevo Libro</h1>
+        </div>
+        <div class="card-body">
+            <form action="/books/new-book" method="POST">
+                <div class="form-group">
+                    <input type="text" name="id" class="form-control" placeholder="Link de la imagen del libro" autofocus>
+                </div>
+
+                <div class="form-group">
+                    <input type="text" name="titulo" class="form-control" placeholder="Titulo" autofocus>
+                </div>
+
+                <div class="form-group">
+                    <input type="text" name="editorial" class="form-control" placeholder="Editorial" autofocus>
+                </div>
+
+                <div class="form-group">
+                    <input type="text" name="autor" class="form-control" placeholder="Autor(es)" autofocus>
+                </div>
+
+                <div class="form-group">
+                    <input type="text" name="genero" class="form-control" placeholder="Genero" autofocus>
+                </div>
+
+                <div class="form-group">
+                    <input type="text" name="pais" class="form-control" placeholder="Pais" autofocus>
+                </div>
+
+                <div class="form-group">
+                    <input type="text" name="Npaginas" class="form-control" placeholder="Descripcion" autofocus>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary" autofocus>
+                        Guardar
+                    </button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>

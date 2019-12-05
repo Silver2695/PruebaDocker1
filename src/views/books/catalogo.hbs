@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Catalogo</title>
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+<br><br><br>
+<div class="container">
+
+<div class="row">
+    {{#each libro}}
+    <div class="col-md-3">
+        <div class="card-deck">
+            <div class="card">
+                 <img src="{{id}}" class="card-img-top" alt="100" width="80" height="300">
+                 <div class="card-body">
+                <h4 class="card-title">
+                    {{titulo}} 
+                </h4>
+               <p class="card-text"><small class="text-muted"> Autor(es): {{autor}}</small></p>
+               <p><small class="text-muted"> Editorial:{{editorial}}</small></p>
+               <p><small class="text-muted">Genero: {{genero}}</small> </p>
+               <form action="/books/delete/{{_id}}?_method=DELETE" method="POST">
+                    <input type="hidden" name="_method" value="DELETE">
+                    <button class="btn btn-danger" type="submit">Borrar</button>
+               </form>
+               <button type="submit" class="btn btn-primary"><a href="/books/edit/{{_id}}">Editar</button></a>
+            </div>
+        </div>
+    </div>
+    </div>
+    {{/each}}
+</div>
+
+</body>
+</html>
